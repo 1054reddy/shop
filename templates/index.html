@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - E-Fashion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('products_page') }}">Products</a></li>
+                <li><a href="{{ url_for('categories_page') }}">Categories</a></li>
+                <li><a href="{{ url_for('cart_page') }}">Cart</a></li>
+                <li><a href="{{ url_for('profile_page') }}">Profile</a></li>
+            </ul>
+            <div>
+                {% if 'user_id' in session %}
+                    <span>Welcome, {{ session['username'] }}!</span>
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}">Login</a> | 
+                    <a href="{{ url_for('register') }}">Register</a>
+                {% endif %}
+            </div>
+            <input type="text" placeholder="Search for products..." />
+        </nav>
+    </header>
+
+    <main>
+        <h1>Featured Products</h1>
+        <div class="product-list">
+            <!-- Sample products with dynamic links -->
+            <div class="product-item">
+                <a href="{{ url_for('product_details', product_id=1) }}">
+                    <img src="{{ url_for('static', filename='images/mens-t-shirt.jpg') }}" alt="Men's T-Shirt">
+                    <h2>Men's T-Shirt</h2>
+                    <p>$19.99</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="{{ url_for('product_details', product_id=2) }}">
+                    <img src="{{ url_for('static', filename='images/womens-dress.jpg') }}" alt="Women's Dress">
+                    <h2>Women's Dress</h2>
+                    <p>$29.99</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="{{ url_for('product_details', product_id=3) }}">
+                    <img src="{{ url_for('static', filename='images/kids-shoes.jpg') }}" alt="Kids' Shoes">
+                    <h2>Kids' Shoes</h2>
+                    <p>$24.99</p>
+                </a>
+            </div>
+            <!-- Add more products similarly -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Fashion. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

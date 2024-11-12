@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;  /* Ensure full viewport height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: url('https://img.freepik.com/premium-photo/shopping-online-home-concept-blue-background-copyspace_1205-6303.jpg') no-repeat center center/cover;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Search Bar */
+.search-bar {
+    margin-left: auto;
+}
+
+.search-bar input {
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Cart Section */
+.cart {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Cart Table */
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart table thead th {
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-weight: normal;
+}
+
+.cart table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.cart table tbody td img {
+    max-width: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.cart table tbody td input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Remove Item Button */
+.cart table tbody td button.remove-item {
+    padding: 5px 10px;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart table tbody td button.remove-item:hover {
+    background-color: #cc0000;
+}
+
+/* Cart Total Section */
+.cart-total {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.cart-total p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #555;
+}
+
+/* Individual Cart Item */
+.cart-item {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Total Amount Display */
+#total-amount {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
